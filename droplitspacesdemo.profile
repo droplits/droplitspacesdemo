@@ -1,10 +1,10 @@
 <?php
-// $Id: spacesdemo.profile,v 1.1.2.13 2009/12/17 01:37:01 yhahn Exp $
+// $Id: droplitspacesdemo.profile,v 1.1.2.13 2009/12/17 01:37:01 yhahn Exp $
 
 /**
  * Implementation of hook_profile_modules().
  */
-function spacesdemo_profile_modules() {
+function droplitspacesdemo_profile_modules() {
   return array(
     // Core
     'color',
@@ -54,7 +54,7 @@ function spacesdemo_profile_modules() {
 /**
  * Implementation of hook_profile_details().
  */
-function spacesdemo_profile_details() {
+function droplitspacesdemo_profile_details() {
   return array(
     'name' => 'Spaces Demo',
     'description' => 'Demo of Spaces 3 + Context 3 by Development Seed.'
@@ -64,14 +64,14 @@ function spacesdemo_profile_details() {
 /**
  * Implementation of hook_profile_task_list().
  */
-function spacesdemo_profile_task_list() {
+function droplitspacesdemo_profile_task_list() {
   return array();
 }
 
 /**
  * Implementation of hook_profile_tasks().
  */
-function spacesdemo_profile_tasks(&$task, $url) {
+function droplitspacesdemo_profile_tasks(&$task, $url) {
   // Update the menu router information.
   menu_rebuild();
 
@@ -84,7 +84,7 @@ function spacesdemo_profile_tasks(&$task, $url) {
   // Enable the right theme. This must be handled after drupal_flush_all_caches()
   // which rebuilds the system table based on a stale static cache,
   // blowing away our changes.
-  _spacesdemo_system_theme_data();
+  _droplitspacesdemo_system_theme_data();
   db_query("UPDATE {system} SET status = 0 WHERE type = 'theme'");
   db_query("UPDATE {system} SET status = 1 WHERE type = 'theme' AND name = 'cube'");
   db_query("UPDATE {blocks} SET region = '' WHERE theme = 'cube'");
@@ -211,7 +211,7 @@ function spacesdemo_profile_tasks(&$task, $url) {
 /**
  * Implementation of hook_form_alter().
  */
-function spacesdemo_form_alter(&$form, $form_state, $form_id) {
+function droplitspacesdemo_form_alter(&$form, $form_state, $form_id) {
   if ($form_id == 'install_configure') {
     // Set default for site name field.
     $form['site_information']['site_name']['#default_value'] = $_SERVER['SERVER_NAME'];
@@ -223,9 +223,9 @@ function spacesdemo_form_alter(&$form, $form_state, $form_id) {
  * is populated during install prior to active install profile awareness.
  * This workaround makes enabling themes in profiles/managingnews/themes possible.
  */
-function _spacesdemo_system_theme_data() {
+function _droplitspacesdemo_system_theme_data() {
   global $profile;
-  $profile = 'spacesdemo';
+  $profile = 'droplitspacesdemo';
 
   $themes = drupal_system_listing('\.info$', 'themes');
   $engines = drupal_system_listing('\.engine$', 'themes/engines');
