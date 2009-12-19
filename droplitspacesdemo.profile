@@ -92,7 +92,7 @@ function droplitspacesdemo_profile_tasks(&$task, $url) {
 
   // Generate groups, blog posts, comments.
   node_types_rebuild();
-  module_load_include('inc', 'devel_generate', 'devel_generate');
+  module_load_include('inc', 'devel_generate');
 
   // Rebuild access lists.
   node_access_rebuild();
