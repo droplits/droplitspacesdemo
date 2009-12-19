@@ -7,7 +7,7 @@
  * @return
  *   An array of modules to enable.
  */
-function spacesdemo_profile_modules() {
+function droplitspacesdemo_profile_modules() {
   return array('color', 'comment', 'help', 'menu', 'taxonomy', 'dblog');
 }
 
@@ -19,7 +19,7 @@ function spacesdemo_profile_modules() {
  *   and optional 'language' to override the language selection for
  *   language-specific profiles.
  */
-function spacesdemo_profile_details() {
+function droplitspacesdemo_profile_details() {
   return array(
     'name' => 'Spaces Demo',
     'description' => 'Demo of Spaces 3 + Context 3 by Development Seed.'
@@ -35,7 +35,7 @@ function spacesdemo_profile_details() {
  *   while the values will be displayed to the user in the installer
  *   task list.
  */
-function spacesdemo_profile_task_list() {
+function droplitspacesdemo_profile_task_list() {
 }
 
 /**
@@ -89,7 +89,7 @@ function spacesdemo_profile_task_list() {
  *   An optional HTML string to display to the user. Only used if you
  *   modify the $task, otherwise discarded.
  */
-function spacesdemo_profile_tasks(&$task, $url) {
+function droplitspacesdemo_profile_tasks(&$task, $url) {
 
   // Insert default user-defined node types into the database. For a complete
   // list of available node type attributes, refer to the node type API
@@ -143,7 +143,7 @@ function spacesdemo_profile_tasks(&$task, $url) {
  * Allows the profile to alter the site-configuration form. This is
  * called through custom invocation, so $form_state is not populated.
  */
-function spacesdemo_form_alter(&$form, $form_state, $form_id) {
+function droplitspacesdemo_form_alter(&$form, $form_state, $form_id) {
   if ($form_id == 'install_configure') {
     // Set default for site name field.
     $form['site_information']['site_name']['#default_value'] = $_SERVER['SERVER_NAME'];
