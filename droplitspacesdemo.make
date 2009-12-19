@@ -48,11 +48,11 @@ projects[spaces][download][revision] = "DRUPAL-6--3"
 
 projects[rubik][type] = "theme"
 projects[rubik][download][type] = "git"
-projects[rubik][download][url] = "git@github.com:developmentseed/rubik.git"
+projects[rubik][download][url] = "git://github.com/developmentseed/rubik.git"
 
 projects[tao][type] = "theme"
 projects[tao][download][type] = "git"
-projects[tao][download][url] = "git@github.com:developmentseed/tao.git"
+projects[tao][download][url] = "git://github.com/developmentseed/tao.git"
 
 libraries[jquery_ui][download][type] = "get"
 libraries[jquery_ui][download][url] = "http://jquery-ui.googlecode.com/files/jquery.ui-1.6.zip"
@@ -61,8 +61,11 @@ libraries[jquery_ui][destination] = modules/jquery_ui
 
 projects[atrium_reader][type] = "module"
 projects[atrium_reader][download][type] = "git"
-projects[atrium_reader][download][url] = "git@github.com:yhahn/atrium_reader.git"
+projects[atrium_reader][download][url] = "git://github.com/yhahn/atrium_reader.git"
 
 projects[jupiter][type] = "module"
 projects[jupiter][download][type] = "git"
-projects[jupiter][download][url] = "git@github.com:developmentseed/Jupiter.git"
+projects[jupiter][download][url] = "git://github.com/developmentseed/Jupiter.git"
+
+
+
